@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "site": "nextjs-blog-template",
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
+
+/*
+  Command:
+  firebase deploy --only hosting:nextjs-blog-template
+*/
