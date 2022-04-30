@@ -68,6 +68,10 @@ This is used to get the info of each post in a special format, such as the title
 
 For the fronmatter we are gonna use a package called `gray-matter` which will take a string with a frontmatter and turn it into and object
 
+We used the `fs` module to get the files from the directory, created a slug, passed the front-matter with grey-matter and basically returned the slug and the front-matter as the post prop.
+
+
+
 
 
 
