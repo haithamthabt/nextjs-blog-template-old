@@ -71,6 +71,17 @@ For the fronmatter we are gonna use a package called `gray-matter` which will ta
 We used the `fs` module to get the files from the directory, created a slug, passed the front-matter with grey-matter and basically returned the slug and the front-matter as the post prop.
 
 
+## Tailwind and Markdown
+
+Unfortunatly `Tailwind` removes the default styles that come with `markdown`; therefore, we are gonna need to write our own styles in the `globals.css` file
+
+## Using the Next.js Export
+
+>Note: for using the Next,js `next export`, you are not gonna be able to use the Image optimization functionality;therefore we are gonna need to replace the Next.js `<Image>` tag with the default html `<img>` tag
+
+
+
+
 
 
 
