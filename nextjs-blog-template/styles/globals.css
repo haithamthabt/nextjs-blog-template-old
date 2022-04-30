@@ -8,15 +8,15 @@
 /*==================================================*/
 /*This section is for the defalut markdown styles*/
 
-/* Tailwind straps everything from the markdown styles so we need to write our own for the markdown"
+/* Tailwind straps everything from the markdown styles so we need to write our own for the markdown" */
 
 
-a {
+#content a {
 	color: #4183c4;
 	text-decoration: none;
 	}
 
-a:hover {
+#content a:hover {
 	text-decoration: underline;
 	}
 
@@ -28,23 +28,23 @@ ul, ol {
 	padding-left: 30px;
 	}
 
-h1 {
+#content h1 {
 	border-bottom: 1px solid #ddd;
 	color: #000;
 	font-size: 2.5em;
 	}
 
-h2 {
+#content h2 {
 	border-bottom: 1px solid #eee;
 	color: #000;
 	font-size: 2.0em;
 	}
 
-h3 {
+#content h3 {
 	font-size: 1.5em;
 	}
 
-h4 {
+#content h4 {
 	font-size: 1.2em;
 	}
 
