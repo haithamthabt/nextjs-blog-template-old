@@ -5,9 +5,7 @@ name: Build and Deploy to Firebase Hosting
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [ main/nextjs-blog-template ]
 
 jobs:
   build:
