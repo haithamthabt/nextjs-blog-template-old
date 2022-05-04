@@ -4,7 +4,6 @@ import matter from 'gray-matter';
 import Layout from '../../components/Layout';
 
 export default function BlogPage({posts}) {
-    console.log(posts)
   return (
     <Layout>
         <h1>Blog</h1>
