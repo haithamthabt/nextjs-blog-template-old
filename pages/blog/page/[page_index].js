@@ -1,12 +1,12 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Layout from "../../../components/Layout";
-import Pagination from "../../../components/Pagination";
+import Layout from "@/components/Layout";
+import Pagination from "@/components/Pagination";
 import Link from "next/link";
-import Post from "../../../components/Post";
-import { sortByDate } from "../../../utils";
-import { POSTS_PER_PAGE } from "../../../config";
+import Post from "@/components/Post";
+import { sortByDate } from "@/utils/index";
+import { POSTS_PER_PAGE } from "@/config/index";
 
 export default function DefalutBlogPage({ posts, numPages, currentPage }) {
   return (
