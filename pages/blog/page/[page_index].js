@@ -1,14 +1,13 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import Layout from "@/components/Layout";
 import Pagination from "@/components/Pagination";
-import Link from "next/link";
 import Post from "@/components/Post";
-import { sortByDate } from "@/utils/index";
 import { POSTS_PER_PAGE } from "@/config/index";
+import { getPosts } from '@/lib/posts';
 
-export default function DefalutBlogPage({ posts, numPages, currentPage }) {
+
+export default function DefaultBlogPage({ posts, numPages, currentPage }) {
   return (
     <Layout>
       <h1 className="text-5xl border-b-4 p-5 font-bold">Blog Posts</h1>
@@ -45,37 +44,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  // make /blog the defalut for the 1 pagination
 
+  // make /blog the defalut for the 1 pagination
   const page = parseInt((params && params.page_index) || 1);
 
   const files = fs.readdirSync(path.join("data/posts"));
   //console.log(files) //this to show the files in the dir
 
-  // map thru the files array and create a new array with the slug and the frontmatter data
-  const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
-
-    const markdownWithMeta = fs.readFileSync(
-      path.join("data/posts", filename),
-      "utf-8"
-    );
-
-    //Using gray-matter package to turn the string of the frontmatter to object
-    //We are renaming the data object to frontmatter
-    const { data: frontmatter } = matter(markdownWithMeta);
-
-    return {
-      slug,
-      frontmatter,
-    };
-  });
+  // get the posts
+  const posts = getPosts()
 
   const numPages = Math.ceil(files.length / POSTS_PER_PAGE);
   const pageIndex = page - 1;
-  const orderedPosts = posts
-    .sort(sortByDate)
-    .slice(pageIndex * POSTS_PER_PAGE, (pageIndex + 1) * POSTS_PER_PAGE);
+  const orderedPosts = posts.slice(pageIndex * POSTS_PER_PAGE, (pageIndex + 1) * POSTS_PER_PAGE);
 
   return {
     props: {
