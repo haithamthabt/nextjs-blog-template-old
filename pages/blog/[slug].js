@@ -33,8 +33,8 @@ export default function PostPage({
           <div className='mr-4'>{date}</div>
         </div>
 
-        <div id='md-container' className='blog-text mt-2 md-container-class'>
-          <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+        <div id='md-container' className='blog-text mt-2'>
+          <div className='prose max-w-none' dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>
       </div>
     </Layout>
