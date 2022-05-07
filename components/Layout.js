@@ -1,7 +1,13 @@
 import Head from 'next/head';
 import Header from './Header';
+import Prism from "prismjs";
+import React, { useEffect } from 'react';
 
 export default function Layout({title, keywords, description, children}) {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+
   return (
     <div>
         <Head>
