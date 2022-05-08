@@ -39,6 +39,16 @@ procul fugitque corpora iugales!
 
 ## O contra diu
 
+### Here are some code to test out
+
+```javascript
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+
+```
+
 Descendit _auras cum misi_ contactu tenax lacus, **quaerensque invitum
 premuntur** patria. Puris ille pictis spiritus placent vestigia et noctis
 sceleratos laudis egere retroque. Patrem contenta magni margine satis inprudens
