@@ -4,19 +4,26 @@ import Layout from "@/components/Layout";
 import Pagination from "@/components/Pagination";
 import Post from "@/components/Post";
 import { POSTS_PER_PAGE } from "@/config/index";
-import { getPosts } from '@/lib/posts';
+import { getPosts } from "@/lib/posts";
+import CategoryList from "@/components/CategoryList";
 
-
-export default function DefaultBlogPage({ posts, numPages, currentPage }) {
+export default function DefaultBlogPage({ posts, numPages, currentPage, categories }) {
   return (
     <Layout>
-      <h1 className="text-5xl border-b-4 p-5 font-bold">Blog Posts</h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {posts.map((post, index) => (
-          <Post key={index} post={post} />
-        ))}
+      <div className="flext justify-between">
+        <div className="w-4/5 mr-10">
+          <h1 className="text-5xl border-b-4 p-5 font-bold">Blog Posts</h1>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {posts.map((post, index) => (
+              <Post key={index} post={post} />
+            ))}
+          </div>
+          <Pagination currentPage={currentPage} numPages={numPages} />
+        </div>
+        <div className="w-1/5">
+          <CategoryList categories={categories}></CategoryList>
+        </div>
       </div>
-      <Pagination currentPage={currentPage} numPages={numPages} />
     </Layout>
   );
 }
@@ -44,7 +51,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-
   // make /blog the defalut for the 1 pagination
   const page = parseInt((params && params.page_index) || 1);
 
@@ -52,17 +58,25 @@ export async function getStaticProps({ params }) {
   //console.log(files) //this to show the files in the dir
 
   // get the posts
-  const posts = getPosts()
+  const posts = getPosts();
+
+  // get categories for sidebar
+  const categories = posts.map((post) => post.frontmatter.category);
+  const uniqueCategories = [...Set(categories)]
 
   const numPages = Math.ceil(files.length / POSTS_PER_PAGE);
   const pageIndex = page - 1;
-  const orderedPosts = posts.slice(pageIndex * POSTS_PER_PAGE, (pageIndex + 1) * POSTS_PER_PAGE);
+  const orderedPosts = posts.slice(
+    pageIndex * POSTS_PER_PAGE,
+    (pageIndex + 1) * POSTS_PER_PAGE
+  );
 
   return {
     props: {
       posts: orderedPosts,
       numPages,
       currentPage: page,
+      categories: uniqueCategories,
     },
   };
 }
