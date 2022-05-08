@@ -10,7 +10,7 @@ import CategoryList from "@/components/CategoryList";
 export default function DefaultBlogPage({ posts, numPages, currentPage, categories }) {
   return (
     <Layout>
-      <div className="flext justify-between">
+      <div className="flex justify-between">
         <div className="w-4/5 mr-10">
           <h1 className="text-5xl border-b-4 p-5 font-bold">Blog Posts</h1>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -62,7 +62,7 @@ export async function getStaticProps({ params }) {
 
   // get categories for sidebar
   const categories = posts.map((post) => post.frontmatter.category);
-  const uniqueCategories = [...Set(categories)]
+  const uniqueCategories = [...new Set(categories)]
 
   const numPages = Math.ceil(files.length / POSTS_PER_PAGE);
   const pageIndex = page - 1;
