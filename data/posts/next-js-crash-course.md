@@ -1,5 +1,5 @@
 ---
-title: 'Django Crash Course'
+title: 'Nextjs Crash Course'
 date: 'May 5, 2021'
 excerpt: 'Django is a very powerful, high level Python framework for building web applications'
 cover_image: '/images/posts/img3.jpg'
@@ -9,7 +9,7 @@ author_image: 'https://randomuser.me/api/portraits/men/12.jpg'
 ---
 
 <!-- Markdow generator - https://jaspervdj.be/lorem-markdownum/ -->
-## What Exactly is Django?
+## What Exactly is NEXT.js?
 
 ### Dev Branch
 Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat
