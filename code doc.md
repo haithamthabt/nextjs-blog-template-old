@@ -90,8 +90,6 @@ For the pagination, we created `page` folder and inside it we created the file `
 ## The folder `config` in the root folder
 This folder is used to add any settings, configuration or any custom stuff for the website
 
-## `lib` Folder
-This folder is used to write any abstract/common functions that can be used in multiple places
 
 ## `utils` Folder
 This folder is used to write any abstract/common functions that can be used in multiple places
