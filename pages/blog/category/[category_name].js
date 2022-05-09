@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import Post from "@/components/Post";
 import { getPosts } from "@/utils/posts";
 import CategoryList from "@/components/CategoryList";
+import {BLOG_POSTS_PATH} from "@/utils/content_paths"; 
 
 export default function CategoryBlogPage({ posts, categoryName, categories }) {
   return (
@@ -30,11 +31,11 @@ export default function CategoryBlogPage({ posts, categoryName, categories }) {
 
 // to get and fetch the categories with their paths
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("data/posts"));
+  const files = fs.readdirSync(path.join(BLOG_POSTS_PATH));
 
   const categories = files.map((filename) => {
     const markdownWithMeta = fs.readFileSync(
-      path.join("data/posts", filename),
+      path.join(BLOG_POSTS_PATH, filename),
       "utf-8"
     );
 

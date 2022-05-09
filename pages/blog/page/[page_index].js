@@ -6,6 +6,7 @@ import Post from "@/components/Post";
 import { POSTS_PER_PAGE } from "@/config/index";
 import { getPosts } from "@/utils/posts";
 import CategoryList from "@/components/CategoryList";
+import {BLOG_POSTS_PATH} from "@/utils/content_paths"; 
 
 export default function DefaultBlogPage({ posts, numPages, currentPage, categories }) {
   return (
@@ -31,7 +32,7 @@ export default function DefaultBlogPage({ posts, numPages, currentPage, categori
 //This function is for the paganation functionality
 export async function getStaticPaths() {
   // first we need to get the files
-  const files = fs.readdirSync(path.join("data/posts"));
+  const files = fs.readdirSync(path.join(BLOG_POSTS_PATH));
 
   // Then we need to get the number of pages
   // This will be based on how many posts per page we want to display
@@ -54,7 +55,7 @@ export async function getStaticProps({ params }) {
   // make /blog the defalut for the 1 pagination
   const page = parseInt((params && params.page_index) || 1);
 
-  const files = fs.readdirSync(path.join("data/posts"));
+  const files = fs.readdirSync(path.join(BLOG_POSTS_PATH));
   //console.log(files) //this to show the files in the dir
 
   // get the posts
