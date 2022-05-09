@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import Layout from "@/components/Layout";
 import Post from "@/components/Post";
-import { getPosts } from "@/lib/posts";
+import { getPosts } from "@/utils/posts";
 import CategoryList from "@/components/CategoryList";
 
 export default function CategoryBlogPage({ posts, categoryName, categories }) {

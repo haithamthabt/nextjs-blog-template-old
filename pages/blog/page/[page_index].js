@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import Pagination from "@/components/Pagination";
 import Post from "@/components/Post";
 import { POSTS_PER_PAGE } from "@/config/index";
-import { getPosts } from "@/lib/posts";
+import { getPosts } from "@/utils/posts";
 import CategoryList from "@/components/CategoryList";
 
 export default function DefaultBlogPage({ posts, numPages, currentPage, categories }) {
