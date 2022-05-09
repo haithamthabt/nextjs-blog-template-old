@@ -97,6 +97,16 @@ This folder is used to write any abstract/common functions that can be used in m
 ## `jsconfig.json` 
 In this file we wrote some code so we can have dynamic paths to the folders we have in the project
 
+## `_data` 
+this is the only folder you need to change. Here you can add content, change website data, configs, names, settings, ...etc
+
+
+=====================================================================================================
+5/8/2022 8PM
+I renamed `data` folder to `_data` so this can be the only folder people change. This is where you change the website content/settings
+
+I created `utils/content_paths.js` file so I can add global veriables for the content paths so I only change this whenever the content path changes
+
 
 
 
