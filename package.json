@@ -4,8 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "move ./_data/images public && next build && next export",
-    "move": "move ./_data/images public",
+<<<<<<< HEAD
+    "build": "mv ./_data/images1 public && next build && next export",
+    "move": "move ./_data/images1 public",
+=======
+    "build": "mv ./_data/images public && next build && next export",
+    "move": "move ./_data/images1 public",
+>>>>>>> 44ba94cf2190d882ce688c181730d26df06efcec
     "start": "next start",
     "lint": "next lint"
   },
