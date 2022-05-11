@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "move": "move ./_data/images1 public",
     "start": "next start",
     "lint": "next lint"
   },
