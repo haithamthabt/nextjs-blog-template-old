@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout';
 import Link from 'next/link';
 import Post from '@/components/Post';
-import { getPosts } from '@/lib/posts';
+import { getPosts } from '@/utils/posts';
 
 export default function HomePage({posts}) {
   return (

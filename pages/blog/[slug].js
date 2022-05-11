@@ -5,6 +5,7 @@ import { marked } from 'marked'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import CategoryLabel from '@/components/CategoryLabel'
+import {BLOG_POSTS_PATH} from "@/utils/content_paths"; 
 
 export default function PostPage({
   frontmatter: { title, category, date, cover_image, author, author_image },
@@ -42,7 +43,7 @@ export default function PostPage({
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('data/posts'))
+  const files = fs.readdirSync(path.join(BLOG_POSTS_PATH))
 
   const paths = files.map((filename) => ({
     params: {
@@ -58,7 +59,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   const markdownWithMeta = fs.readFileSync(
-    path.join('data/posts', slug + '.md'),
+    path.join(BLOG_POSTS_PATH, slug + '.md'),
     'utf-8'
   )
 
