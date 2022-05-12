@@ -108,6 +108,30 @@ I renamed `data` folder to `_data` so this can be the only folder people change.
 I created `utils/content_paths.js` file so I can add global veriables for the content paths so I only change this whenever the content path changes
 
 
+================================================================
+
+So I had this "Refresh" problem when I tried to deploy the project to firebase. Whenever we refresh the issue, either the site goes to home or show error or 404 page. 
+
+Issue is because of how NEXT.js handles routings after we export the project to static. 
+So what we need is to add the `trailingSlash`.
+
+```javascript
+module.exports = {
+  trailingSlash: true
+}
+```
+When we do this, NEXT.js creates folder for each page and then adds `index.html` inside this page. 
+
+This solution comes with another issue. 
+
+ It looks like the `trailingSlash: true` config also exports the `404.js` as `out/404/index.html` but what we need is to have `out/404.html`
+
+
+================================================================
+
+In package.json I added some codes to move files and folders from the customable folder _data to the root folder public, this is because in order for NEXT.js to render these assets and public pages they have to be in the root directory `public` but for us to make the template as abstract as possible and to make it easy for the person to use it, we decided to make a folder called `_data` and in it we change anything regarding the website.
+
+
 
 
 
