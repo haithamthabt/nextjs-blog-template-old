@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "rename": "node -e \"require('fs').rename('_data/test.txt', '_data/test1.txt', function(err) { if (err) console.log(err); console.log('File successfully renamed!') })\"",
-    "move_public": "mv ./_data/assets public && mv ./_data/_public/favicon.ico public && mv ./_data/_public/manifest.json public && mv ./_data/_public/robots.txt public && mv ",
-    "move": "move ./_data/assets public && move ./_data/_public/favicon.ico public && move ./_data/_public/manifest.json public && move ./_data/_public/robots.txt public && mv "
+    "move_public": "mv ./_data/assets public && mv ./_data/_public/favicon.ico public && mv ./_data/_public/manifest.json public && mv ./_data/_public/robots.txt public",
+    "move": "move ./_data/assets public && move ./_data/_public/favicon.ico public && move ./_data/_public/manifest.json public && move ./_data/_public/robots.txt public"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
