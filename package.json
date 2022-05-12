@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "mv ./_data/images public && next build && next export",
+    "build": "mv ./_data/assets public && next build && next export",
     "move": "move ./_data/images1 public",
     "start": "next start",
     "lint": "next lint"
