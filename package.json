@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "mv ./_data/assets public && next build && next export",
+    "build": "npm run move_public && next build && next export",
     "start": "next start",
     "lint": "next lint",
     "rename": "node -e \"require('fs').rename('_data/test.txt', '_data/test1.txt', function(err) { if (err) console.log(err); console.log('File successfully renamed!') })\"",
