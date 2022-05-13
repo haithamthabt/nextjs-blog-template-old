@@ -26,7 +26,7 @@ This folder is for any file that need to be put inside the root folder such as `
 - Option 1: You will need to put the files directory into the the default NEXT.js `public` folder
 - Option 2: You can put the files inside the `_data/_public` but you will need to modify the package.json file to move the files for you on the `npm build`
 
-Under `scripts` you will find the script `move_public` that is responsilbe for moving the files from `_data/_public` to the root directory `public`
+Under `scripts` you will find the script `move_public` that is responsilbe for moving the subfolders from `_data` and files from `_data/_public` to the root directory `public`
 
 Similar to the following
 
