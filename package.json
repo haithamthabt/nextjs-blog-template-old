@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run copy_local && next dev",
     "build": "npm run move_public && next build && next export && npm run rename_404",
+    "build_local": "npm run copy_local && next build && next export && npm run rename_404",
     "start": "next start",
     "lint": "next lint",
     "rename_404": "node -e \"require('fs').rename('out/404/index.html', 'public/404.html', function(err) { if (err) console.log(err); console.log('File successfully renamed!') })\"",
     "move_public": "mv ./_data/assets public && mv ./_data/_public/favicon.ico public && mv ./_data/_public/manifest.json public && mv ./_data/_public/robots.txt public",
-    "move": "move ./_data/assets public && move ./_data/_public/favicon.ico public && move ./_data/_public/manifest.json public && move ./_data/_public/robots.txt public"
+    "copy_local": "move .\\_data\\assets public && move .\\_data\\_public\\favicon.ico public && move .\\_data\\_public\\manifest.json public && move .\\_data\\_public\\robots.txt public"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
