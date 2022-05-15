@@ -22,17 +22,7 @@ Inisde this folder you have files and subfolders and each one has its job
 ### `_data/_public` Folder
 
 This folder is for any file that need to be put inside the root folder such as `favicon.ico` `robots.txt` 
-> Note: as of right now, only three files `favicon.ico` `robots.txt` and `manifest.json` are being moved to the root directory when building and exporting the project. if you need to put other files in the root directory, you have two options
-- Option 1: You will need to put the files directory into the the default NEXT.js `public` folder
-- Option 2: You can put the files inside the `_data/_public` but you will need to modify the package.json file to move the files for you on the `npm build`
-
-Under `scripts` you will find the script `move_public` that is responsilbe for moving the subfolders from `_data` and files from `_data/_public` to the root directory `public`
-
-Similar to the following
-
-```json
-"move_public": "mv ./_data/assets public && mv ./_data/_public/favicon.ico public && mv ./_data/_public/manifest.json public && mv ./_data/_public/robots.txt public",
-```
+Any file you need to put inside the root directory, just put it inside `_data/_public` and after the build and export, it will be put inside the root directory.
 
 ### `_data/about` Folder
 This folder contains a file `about.md` 
