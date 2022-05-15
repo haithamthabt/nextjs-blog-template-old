@@ -20,41 +20,46 @@ export default function ContactPage({ content }) {
             ></div>
           </div>
         </div>
-        <div class="bg-white shadow-lg rounded-xl p-10 mt-6">
-          <h4 class="text-center text-3xl p-6">Contact Us</h4>
+        <div className="bg-white shadow-lg rounded-xl p-10 mt-6">
+          <h4 className="text-center text-3xl p-6">Contact Us</h4>
           <Airform email="webmaster1@developapps.org">
-            <div class="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-2 gap-5">
               <input
                 type="text"
-                class="border border-gray-500 px-4 py-2 focus:outline-none focus:border-purple-500"
+                className="border border-gray-500 px-4 py-2 focus:outline-none focus:border-purple-500"
                 placeholder="First Name"
+                name="first name"
               />
               <input
                 type="text"
-                class="border border-gray-500 px-4 py-2 focus:outline-none focus:border-purple-500"
+                className="border border-gray-500 px-4 py-2 focus:outline-none focus:border-purple-500"
                 placeholder="Last Name"
+                name="last name"
               />
               <input
                 type="email"
-                class="border border-gray-500 px-4 py-2 focus:outline-none focus:border-purple-500 col-span-2"
+                className="border border-gray-500 px-4 py-2 focus:outline-none focus:border-purple-500 col-span-2"
                 placeholder="Email"
+                name="email"
               />
               <input
                 type="text"
-                class="border border-gray-500 px-4 py-2 focus:outline-none focus:border-purple-500 col-span-2"
+                className="border border-gray-500 px-4 py-2 focus:outline-none focus:border-purple-500 col-span-2"
                 placeholder="Subject"
+                name="subject"
               />
               <textarea
                 cols="10"
                 rows="5"
-                class="border border-gray-500 px-4 py-2 focus:outline-none focus:border-purple-500 col-span-2"
+                className="border border-gray-500 px-4 py-2 focus:outline-none focus:border-purple-500 col-span-2"
                 placeholder="Write your message..."
+                name="message"
               ></textarea>
             </div>
             <input
               type="submit"
               value="Send Message"
-              class="focus:outline-none mt-5 bg-gray-900 px-4 py-2 text-white font-bold w-full"
+              className="focus:outline-none mt-5 bg-gray-900 px-4 py-2 text-white font-bold w-full"
             />
           </Airform>
         </div>
