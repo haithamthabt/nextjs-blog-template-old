@@ -5,6 +5,7 @@ import { marked } from "marked";
 import Layout from "@/components/Layout";
 import { CONTACT_CONTENT_PATH } from "@/utils/content_paths";
 import Airform from 'react-airform'
+import { CONTACT_EMAIL } from "@_data/config/index";
 
 export default function ContactPage({ content }) {
   return (
@@ -22,7 +23,7 @@ export default function ContactPage({ content }) {
         </div>
         <div className="bg-white shadow-lg rounded-xl p-10 mt-6">
           <h4 className="text-center text-3xl p-6">Contact Us</h4>
-          <Airform email="webmaster1@developapps.org">
+          <Airform email="{CONTACT_EMAIL}">
             <div className="grid grid-cols-2 gap-5">
               <input
                 type="text"
