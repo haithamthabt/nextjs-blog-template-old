@@ -6,7 +6,7 @@ import { WEBSITE_DIRECTION } from "@_data/config/index";
 function MyApp({ Component, pageProps }) {
   if(WEBSITE_DIRECTION === "rtl"){
     return(
-      <div className='testingthis' dir='rtl'><Component {...pageProps} /></div>
+      <div dir='rtl'><Component {...pageProps} /></div>
     )
   } else {
     return(
