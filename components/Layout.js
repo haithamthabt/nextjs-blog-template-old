@@ -10,7 +10,7 @@ export default function Layout({title, keywords, description, children}) {
   }, []);
 
   return (
-    <div>
+    <div className='flex flex-col h-screen'>
         <Head>
             <title>{title}</title>
             <meta name='keywords' content={keywords}></meta>
@@ -18,7 +18,7 @@ export default function Layout({title, keywords, description, children}) {
             <link rel='icon' href='/favicon.ico'></link>
         </Head>
         <Header />
-        <main className='container mx-auto my-7'>{children}</main>
+        <main className='container mx-auto my-7 flex-grow' >{children}</main>
         <Footer />
     </div>
   )
