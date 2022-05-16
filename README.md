@@ -54,4 +54,44 @@ export const WEBSITE_DIRECTION = "ltr" // to make the website right to left chan
 
 ```
 
+##### Website Name
+
+Change the following code inside the file `_data/config/index.js`
+
+```javascript
+export const LOGO_TEXT = "NEXTjs.net";
+
+```
+
+##### Website Direction
+
+Change the following code inside the file `_data/config/index.js` to change the website direction. 
+For example english is `left to right` `ltr` language. By default the website is `ltr`
+However some langues such as arabic is `right to left` `rtl` language. So it needs to be changed to `rtl`
+
+```javascript
+export const WEBSITE_DIRECTION = "rtl" // rtl for right to left
+
+```
+
+##### Number of posts in blog page
+
+Change the following code inside the file `_data/config/index.js`
+
+```javascript
+export const POSTS_PER_PAGE = 3;
+
+```
+
+##### Contact page email
+
+Change the following code inside the file `_data/config/index.js`
+>Note: We are using the open source service called airform to submit the form and send it to your email
+>So you will need to activate it. To do that you need to submit the first form and they will send you activation emial
+
+```javascript
+export const CONTACT_EMAIL = "contactform@nextjs.net"
+
+```
+
 
