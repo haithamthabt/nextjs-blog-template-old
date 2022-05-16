@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from './Header';
+import Footer from './Footer';
 import Prism from "prismjs";
 import React, { useEffect } from 'react';
 
@@ -18,6 +19,7 @@ export default function Layout({title, keywords, description, children}) {
         </Head>
         <Header />
         <main className='container mx-auto my-7'>{children}</main>
+        <Footer />
     </div>
   )
 }
