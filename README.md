@@ -39,4 +39,19 @@ So in your md files make sure to put the url similar to `/assets/images/image1.p
 This folder is where you put your content. 
 For blog posts you need to put your blog posts inside the sub folder `_data/content/blog_posts`
 
+### `_data/config` Folder
+This folder is where you can change lots of things of the website
+Inside this folder this is js file `index.js` here where you can change the name of the website, contact email, and all the stuff that needed customization.
+
+Here is some of the stuff you can change
+
+```javascript
+
+export const POSTS_PER_PAGE = 3;
+export const LOGO_TEXT = "NEXTjs.net";
+export const CONTACT_EMAIL = "contactform@nextjs.net"
+export const WEBSITE_DIRECTION = "ltr" // to make the website right to left change this to rtl
+
+```
+
 
