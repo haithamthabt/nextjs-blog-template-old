@@ -3,7 +3,7 @@ import path from "path";
 import Layout from "@/components/Layout";
 import Pagination from "@/components/Pagination";
 import Post from "@/components/Post";
-import { POSTS_PER_PAGE } from "@_data/config/index";
+import { POSTS_PER_PAGE_BLOG } from "@_data/config/index";
 import { getPosts } from "@/utils/posts";
 import CategoryList from "@/components/CategoryList";
 import {BLOG_POSTS_PATH} from "@/utils/content_paths"; 
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 
   // Then we need to get the number of pages
   // This will be based on how many posts per page we want to display
-  const numPages = Math.ceil(files.length / POSTS_PER_PAGE);
+  const numPages = Math.ceil(files.length / POSTS_PER_PAGE_BLOG);
 
   let paths = [];
 
@@ -65,11 +65,11 @@ export async function getStaticProps({ params }) {
   const categories = posts.map((post) => post.frontmatter.category);
   const uniqueCategories = [...new Set(categories)]
 
-  const numPages = Math.ceil(files.length / POSTS_PER_PAGE);
+  const numPages = Math.ceil(files.length / POSTS_PER_PAGE_BLOG);
   const pageIndex = page - 1;
   const orderedPosts = posts.slice(
-    pageIndex * POSTS_PER_PAGE,
-    (pageIndex + 1) * POSTS_PER_PAGE
+    pageIndex * POSTS_PER_PAGE_BLOG,
+    (pageIndex + 1) * POSTS_PER_PAGE_BLOG
   );
 
   return {
