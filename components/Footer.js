@@ -5,16 +5,16 @@ import { WEBSITE_URL } from "@_data/config/index";
 
 export default function Footer() {
   return (
-    <footer class="text-center bg-gray-900 text-white">
-      <div class="px-6 pt-6">
-        <div class="grid lg:grid-cols-4 md:grid-cols-2">
-          <div class="mb-6">
-            <h5 class="uppercase font-bold mb-2.5"></h5>
+    <footer className="text-center bg-gray-900 text-white">
+      <div className="px-6 pt-6">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2">
+          <div className="mb-6">
+            <h5 className="uppercase font-bold mb-2.5"></h5>
 
-            <ul class="list-none mb-0">
+            <ul className="list-none mb-0">
               <li>
                 <Link href="/about">
-                  <a class="text-white">
+                  <a className="text-white">
                     About Us
                   </a>
                 </Link>
@@ -22,13 +22,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div class="mb-6">
-            <h5 class="uppercase font-bold mb-2.5"></h5>
+          <div className="mb-6">
+            <h5 className="uppercase font-bold mb-2.5"></h5>
 
-            <ul class="list-none mb-0">
+            <ul className="list-none mb-0">
               <li>
                 <Link href="/contact">
-                  <a class="text-white">
+                  <a className="text-white">
                     Contact Us
                   </a>
                 </Link>
@@ -36,13 +36,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div class="mb-6">
-            <h5 class="uppercase font-bold mb-2.5"></h5>
+          <div className="mb-6">
+            <h5 className="uppercase font-bold mb-2.5"></h5>
 
-            <ul class="list-none mb-0">
+            <ul className="list-none mb-0">
               <li>
                 <Link href="/blog">
-                  <a class="text-white">
+                  <a className="text-white">
                     Blog
                   </a>
                 </Link>
@@ -50,13 +50,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div class="mb-6">
-            <h5 class="uppercase font-bold mb-2.5"></h5>
+          <div className="mb-6">
+            <h5 className="uppercase font-bold mb-2.5"></h5>
 
-            <ul class="list-none mb-0">
+            <ul className="list-none mb-0">
               <li>
                 <Link href="/">
-                  <a class="text-white">
+                  <a className="text-white">
                     Home
                   </a>
                 </Link>
@@ -66,9 +66,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div class="text-center p-4"> © {COPYRIGHT_YEARS} 
+      <div className="text-center p-4"> © {COPYRIGHT_YEARS} 
         <Link href={WEBSITE_URL}>
-          <a class="text-white">{LOGO_TEXT}</a>
+          <a className="text-white">{LOGO_TEXT}</a>
         </Link>
       </div>
     </footer>
