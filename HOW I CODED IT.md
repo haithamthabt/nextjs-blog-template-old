@@ -132,6 +132,61 @@ This solution comes with another issue.
 In package.json I added some codes to move files and folders from the customable folder _data to the root folder public, this is because in order for NEXT.js to render these assets and public pages they have to be in the root directory `public` but for us to make the template as abstract as possible and to make it easy for the person to use it, we decided to make a folder called `_data` and in it we change anything regarding the website.
 
 
+==============================================================
+Nested Dynamics Routes
+So I wanted to use the nested dynamic routes and I went with the `Catch All Routes` approch. Only issue I dont want to use the hook `useRouter`. 
+I really wanted to use the `getStaticProps()`, but now I needed to use the getStaticPath() as well which fine. Similar to the code below
+
+```javascript
+
+export async function getStaticPaths() {
+    return {
+      paths: [],
+      fallback: false,
+    }
+  }
+
+
+export async function getStaticProps(context) {
+    console.log("=====================current url path ==========================")
+    console.log(context)
+    return {
+      props: {}, // will be passed to the page component as props
+    }
+  }
+
+
+```
+
+However this gave me 404 page for some reason. Its like it couldnt find the page I am trying to get.
+
+I just solved this stupid issue with settiing `fallback` to `true`
+
+```javascript
+
+export async function getStaticPaths() {
+    return {
+      paths: [],
+      fallback: true,
+    }
+  }
+
+
+export async function getStaticProps(context) {
+    console.log("=====================current url path ==========================")
+    console.log(context)
+    return {
+      props: {}, // will be passed to the page component as props
+    }
+  }
+
+
+```
+
+
+Still not sure why but it works now and it gets the url path without the need to use the hook `useRouter`
+
+
 
 
 
