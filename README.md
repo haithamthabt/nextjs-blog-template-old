@@ -87,6 +87,7 @@ export const POSTS_PER_PAGE = 3;
 
 Change the following code inside the file `_data/config/index.js`
 >Note: We are using the open source service called airform to submit the form and send it to your email
+>
 >So you will need to activate it. To do that you need to submit the first form and they will send you activation emial
 
 ```javascript
