@@ -55,15 +55,38 @@ export async function getStaticPaths() {
   //To-Do
   //Now get all files for each folder
 
+  let paths = [];
+
+  for (let i = 1; i <= folders.length; i++) {
+    const files = fs.readdirSync(path.join(TUTORIALS_PATH, folders[i-1]));
+    for (let j = 1; j <= files.length; j++){
+
+      console.log("++++++++++++++++++++++++++++++++++++++++++");
+      console.log(folders[i-1] + " : " +files[j-1]);
+      paths.push({
+        params: { subject_topic: [folders[i-1].toLowerCase(), files[j-1].replace(".md", "").toString()] },
+      });
+    }
+    
+  }
+
+  console.log("ffffffffffffffffffffffffffffffffffffffffffff");
+  console.log(paths)
+
 
 
 
   //testing the CSS folder inside the tutorials folder _data/content/tutorials/CSS
   const test_files = fs.readdirSync(path.join(TUTORIALS_PATH, "CSS"));
 
-  const paths = test_files.map((filename) => ({
+
+
+  /*
+  const paths1 = test_files.map((filename) => ({
     params: { subject_topic: ["css", filename.replace(".md", "").toString()] },
   }));
+
+  */
 
 
   return {
