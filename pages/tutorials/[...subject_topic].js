@@ -62,13 +62,13 @@ export async function getStaticPaths() {
   const test_files = fs.readdirSync(path.join(TUTORIALS_PATH, "CSS"));
 
   const paths = test_files.map((filename) => ({
-    params: { subject_topic: ["CSS", filename.replace(".md", "").toString()] },
+    params: { subject_topic: ["css", filename.replace(".md", "").toString()] },
   }));
 
 
   return {
-    paths: [], //indicates that no page needs be created at build time
-    fallback: "blocking", //indicates the type of fallback
+    paths: paths, //indicates that no page needs be created at build time
+    fallback: false, //indicates the type of fallback
   };
 }
 
