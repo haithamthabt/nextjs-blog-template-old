@@ -1,6 +1,6 @@
 ---
 title: 'Tim Tiam'
-excerpt: 'Interested in the world of Apple'
+excerpt: 'Interested in the world of Apple. Interested in the world of Apple. Interested in the world of Apple. Interested in the world of Apple. Interested in the world of Apple. Interested in the world of Apple'
 author_image: '/assets/images/authors/tim-tiam.jpg'
 twiter: 'https://twiter.com/tim-tiam'
 ---
