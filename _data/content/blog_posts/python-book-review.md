@@ -4,8 +4,7 @@ date: 'May 7, 2021'
 excerpt: 'In this review, we will be looking at the new Python book from Oriley'
 cover_image: '/assets/images/posts/img6.jpg'
 category: 'Python'
-author: 'Mike Richards'
-author_image: 'https://randomuser.me/api/portraits/men/13.jpg'
+author_slug: 'john-doe'
 ---
 
 <!-- Markdow generator - https://jaspervdj.be/lorem-markdownum/ -->
