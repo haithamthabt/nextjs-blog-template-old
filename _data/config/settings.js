@@ -8,13 +8,13 @@ export const WEBSITE_URL = "https://nextjs.net/";
 
 
 
-export const top_nav_menu = {
+export const TOP_NAV_MENU_ITEMS = {
     'Blog': 'blog', 
     'Tutorials': 'tutorials', 
     'About Us': 'about-us', 
 };
 
-export const footer_menu = {
+export const FOOTER_MENU_ITEMS = {
     'About Us': 'about-us',
     'Tutorials': 'tutorials', 
     'Blog': 'blog',
