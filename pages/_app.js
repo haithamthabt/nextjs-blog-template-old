@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 //import '../styles/markdown_styles.scss'
 import "prismjs/themes/prism-tomorrow.css";
-import { WEBSITE_DIRECTION } from "@_data/config/index";
+import { WEBSITE_DIRECTION } from "@_data/config/settings";
 
 function MyApp({ Component, pageProps }) {
   if(WEBSITE_DIRECTION === "rtl"){

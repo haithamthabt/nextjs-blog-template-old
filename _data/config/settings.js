@@ -8,6 +8,21 @@ export const WEBSITE_URL = "https://nextjs.net/";
 
 
 
+export const top_nav_menu = {
+    'Blog': 'blog', 
+    'Tutorials': 'tutorials', 
+    'About Us': 'about-us', 
+};
+
+export const footer_menu = {
+    'About Us': 'about-us',
+    'Tutorials': 'tutorials', 
+    'Blog': 'blog',
+    'Home': 'home'
+};
+
+
+
 
 
 

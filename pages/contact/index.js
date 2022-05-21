@@ -5,7 +5,7 @@ import { marked } from "marked";
 import Layout from "@/components/Layout";
 import { CONTACT_CONTENT_PATH } from "@/utils/content_paths";
 import Airform from 'react-airform'
-import { CONTACT_EMAIL } from "@_data/config/index";
+import { CONTACT_EMAIL } from "@_data/config/settings";
 
 export default function ContactPage({ content }) {
   return (

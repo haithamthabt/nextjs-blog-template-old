@@ -2,7 +2,7 @@ import Layout from '@/components/Layout';
 import Link from 'next/link';
 import Post from '@/components/Post';
 import { getPosts } from '@/utils/posts';
-import { POSTS_PER_PAGE_HOME } from "@_data/config/index";
+import { POSTS_PER_PAGE_HOME } from "@_data/config/settings";
 
 export default function HomePage({posts}) {
   return (

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { LOGO_TEXT } from "@_data/config/index";
-import { COPYRIGHT_YEARS } from "@_data/config/index";
-import { WEBSITE_URL } from "@_data/config/index";
+import { LOGO_TEXT } from "@_data/config/settings";
+import { COPYRIGHT_YEARS } from "@_data/config/settings";
+import { WEBSITE_URL } from "@_data/config/settings";
 
 export default function Footer() {
   return (

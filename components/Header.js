@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { LOGO_TEXT } from "@_data/config/index";
+import { LOGO_TEXT } from "@_data/config/settings";
 
 export default function Header() {
   return (

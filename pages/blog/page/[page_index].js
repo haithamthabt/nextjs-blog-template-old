@@ -3,7 +3,7 @@ import path from "path";
 import Layout from "@/components/Layout";
 import Pagination from "@/components/Pagination";
 import Post from "@/components/Post";
-import { POSTS_PER_PAGE_BLOG } from "@_data/config/index";
+import { POSTS_PER_PAGE_BLOG } from "@_data/config/settings";
 import { getPosts } from "@/utils/posts";
 import CategoryList from "@/components/CategoryList";
 import {BLOG_POSTS_PATH} from "@/utils/content_paths"; 
