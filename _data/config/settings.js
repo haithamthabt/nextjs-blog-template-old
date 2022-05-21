@@ -12,6 +12,7 @@ export const TOP_NAV_MENU_ITEMS = {
     'Blog': 'blog', 
     'Tutorials': 'tutorials', 
     'About Us': 'about-us', 
+    'Authors': 'authors',
 };
 
 export const FOOTER_MENU_ITEMS = {
