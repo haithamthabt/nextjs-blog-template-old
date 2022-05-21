@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { LOGO_TEXT } from "@_data/config/settings";
-import { COPYRIGHT_YEARS } from "@_data/config/settings";
+import { COPYRIGHT_INIT_YEAR } from "@_data/config/settings";
 import { FOOTER_MENU_ITEMS } from "@_data/config/settings";
 import { WEBSITE_URL } from "@_data/config/settings";
 
@@ -33,7 +33,7 @@ export default function Footer() {
 
       <div className="text-center p-4">
         {" "}
-        © {COPYRIGHT_YEARS}
+        © {COPYRIGHT_INIT_YEAR + " - " + new Date().getFullYear().toString() + " Copyright: "}
         <Link href={WEBSITE_URL}>
           <a className="text-white">{LOGO_TEXT}</a>
         </Link>
