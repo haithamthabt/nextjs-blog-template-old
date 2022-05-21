@@ -14,12 +14,12 @@ export default function Footer() {
       <div className="px-6 pt-6">
         <div className="grid lg:grid-cols-4 md:grid-cols-2">
 
-          {Object.keys(FOOTER_MENU_ITEMS).map((item_name, item_slug) => (
+          {Object.keys(FOOTER_MENU_ITEMS).map((item_name) => (
 
             <div className="mb-6">
               <ul className="list-none mb-0">
                 <li>
-                  <Link href={`/${item_slug}`}>
+                  <Link href={`/${FOOTER_MENU_ITEMS[item_name]}`}>
                     <a className="text-white">{item_name}</a>
                   </Link>
                 </li>
