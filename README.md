@@ -2,6 +2,8 @@
 
 This Project is a blog template using Next.js, tailwind, and markdown.
 
+Live View (https://nextjs-blog-template.firebaseapp.com/)
+
 
 
 ## `_data` Folder
