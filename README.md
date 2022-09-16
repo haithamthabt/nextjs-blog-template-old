@@ -1,4 +1,4 @@
-# Next.js Blog Template
+# Next.js Blog Template V0.5.0
 
 This Project is a blog template using Next.js, tailwind, and markdown.
 
